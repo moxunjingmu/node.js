@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // 读取index.html文件内容
+    const cssStr = `<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      color: red;
+    }
+  </style>
+</head>`
+    const regStyle = /<style>([\s\S]*)<\/style>/
+      // res[0]：整个正则匹配到的内容
+      // res[1]：正则圆括号匹配到的内容
+      const res = regStyle.exec(cssStr)
+      console.log(res);
+  </script>
+</body>
+
+</html>
