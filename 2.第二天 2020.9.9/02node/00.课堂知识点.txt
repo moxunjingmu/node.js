@@ -1,0 +1,11 @@
+1. url地址的不同区域
+ip：在某个区域内，服务器(电脑)的唯一标识
+端口号：区分同一服务器内不同的应用程序
+
+2. 模块化
+2.1 导入模块：require(模块名或模块路径)
+2.2 导出当前模块的内容
+module.exports：既可以通过给对象添加属性的方式暴露资源，也可以用重新赋值的方式暴露资源
+exports：只能通过给对象添加属性的方式暴露资源
+
+当模块中出现 module.exports 和 exports时，以module.exports导出的为准，最好不要同时使用module.exports和exports
