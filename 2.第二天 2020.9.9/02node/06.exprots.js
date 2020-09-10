@@ -1,7 +1,7 @@
 console.log(exports === module.exports)
 exports = {
-  username:'zs',
-  gender:'男'
+  username: 'zs',
+  gender: '男'
 }
 console.log(exports === module.exports)
 module.exports = exports

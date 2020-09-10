@@ -1,0 +1,27 @@
+1. 安装最新版本的包
+npm i 包名
+
+2. 安装指定版本的包
+npm i 包名@版本号
+
+3. package.json项目管理文件：可以记录项目名、版本号、项目的依赖项。。。。。
+3.1 npm init -y：生成项目管理文件
+3.2 注意：项目名不能包含汉字、特殊符号、不能与第三方包的名字相同
+3.3 dependencies：记录项目在运行阶段使用的依赖
+  npm i moment
+  npm i jquery --save
+  npm i dateformat -S
+3.4 devDependencies：记录项目在开发阶段使用的依赖
+  npm i jquery --save-dev
+  npm i dateformat -D
+3.5 main：当前包的出口
+3.6 npm i ：下载package.json 记录的所有依赖项
+3.7 npm uninstall 包名：卸载包
+  简写 npm un 包名
+3.8 npm i 包名 -g：全局安装
+
+4. nrm 与 cnpm
+4.1 查看地址：nrm ls
+4.2 切换地址：nrm use 地址名
+
+4.3 cnpm 与 npm 用法相同，下载的地址不同

@@ -1,0 +1,16 @@
+{
+  "name": "ithema-tools",
+  "version": "1.0.0",
+  "description": "提供格式化时间和HTMLescape相关功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ithema",
+    "dateFormet",
+    "escape"
+  ],
+  "author": "",
+  "license": "ISC"
+}
