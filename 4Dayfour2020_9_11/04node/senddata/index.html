@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jq-send</title>
+</head>
+
+<body>
+  <script src="./jquery.js"></script>
+  <script>
+    const json = JSON.stringify({
+      name: 'zs',
+      age: '18',
+      type: 'json'
+    })
+
+    $.ajax({
+      url: 'http://127.0.0.1/json',
+      type: 'post',
+      contentType: 'application/json;charset=utf-8',
+
+      data: json,
+      success(res) {
+        // 打印响应数据
+        console.log(res);
+      }
+    })
+
+    $.ajax({
+      url: 'http://127.0.0.1/urlencoded',
+      type: 'post',
+      contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+      // data: 'name=zs&age=18',
+      // dataType: 'jsonp',
+      data: {
+        name: "zs",
+        age: "18"
+      },
+      success(res) {
+        // 打印响应数据
+        console.log(res);
+      }
+    })
+  </script>
+</body>
+
+</html>
