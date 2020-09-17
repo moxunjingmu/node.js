@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莫循的主页</title>
+</head>
+
+<body>
+    <button>jquery</button>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        function fn(data) {
+            console.log('调用了fn');
+            console.log(data);
+        }
+
+        function moxun(data) {
+            console.log('调用了moxun');
+            console.log(data);
+        }
+        $('button').on('click', function () {
+            // $.ajax({
+            //     type: 'get',
+            //     url: 'http://127.0.0.1:5050/jsonp',
+            //     dataType: 'jsonp',
+            //     success(res) {
+            //         console.log(res);
+            //     }
+            // })
+            // 动态创建script标签
+            const script = document.createElement('script')
+
+            script.src = "http://127.0.0.1:5050/jsonp?callback=fn"
+
+            document.body.appendChild(script)
+
+            script.onload = function () {
+                this.remove()
+            }
+            // script.onload = e => e.remove()
+        })
+    </script>
+
+    <!-- <script src="http://127.0.0.1:5050/jsonp?callback=moxun"></script> -->
+</body>
+
+</html>

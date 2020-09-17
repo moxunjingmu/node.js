@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莫循的主页</title>
+</head>
+
+<body>
+    <script>
+        function fn(data) {
+            console.log('调用了fn');
+            console.log(data);
+        }
+
+        function moxun(data) {
+            console.log('调用了moxun');
+            console.log(data);
+        }
+    </script>
+    <!-- 查询参数callback：就是返回函数调用的函数名 -->
+    <script src="http://127.0.0.1:5050/jsonp?callback=moxun"></script>
+</body>
+
+</html>
